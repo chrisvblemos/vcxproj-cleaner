@@ -25,6 +25,7 @@ if not vcxprojs or not vcxproj_filters:
 
 print(f"INFO:: Found vcxproj files for solution at \"{root_path}\".")
 
+ET.register_namespace("", "http://schemas.microsoft.com/developer/msbuild/2003")
 ns = {"msbuild": "http://schemas.microsoft.com/developer/msbuild/2003"} 
 vcxproj_files = [vcxprojs[0], vcxproj_filters[0]]
 removed_count = 0
